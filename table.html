@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lanh="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Table</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <input type="text" id="filterInput" placeholder="Search..." onkeyup="filterTable()">
+            <div class="table-container">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th onClick="sortTable(0)">Name</th>
+                        <th onClick="sortTable(1)">Capital</th>
+                        <th onClick="sortTable(2)">Region</th>
+                        <th onClick="sortTable(3)">Population</th>
+                        <th onClick="sortTable(4)">Area (Kms square)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Data will be inserted here dynamically-->
+                </tbody>
+            </table>
+            </div>
+            <div class="pagination">
+                <div>
+                    <label for="rowsPerPage">Rows per page:</label>
+                    <select id="rowsPerPage" onchange="changePerPage()">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                <button onclick="prevPage()">Previous</button>
+                <span id="page-info"></span>
+                <button onclick="nextPage()">Next</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
