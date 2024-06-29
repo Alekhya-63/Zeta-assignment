@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px; /* Adjust as needed */
+}
+
+.table-container {
+    width: 100%;
+    max-height: 500px; /* Adjust max-height as needed */
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Adjust margin-top as needed */
+    position: sticky;
+    bottom: 0;
+    background-color: white; /* Ensures pagination is visible */
+    z-index: 1; /* Ensures pagination overlaps table content */
+}
+
+#filterInput {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Ensures search bar is visible */
+    z-index: 1; /* Ensures search bar overlaps table content */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 10px;
+    }
+
+    .pagination {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagination button {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-top: 5px;
+    }
+
+    .table-container {
+        max-height: 400px; /* Adjust max-height as needed for smaller screens */
+    }
+    
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #filterInput {
+        padding: 4px;
+        font-size: 14px;
+    }
+}
